@@ -105,8 +105,8 @@ data = {"weather": {"value": weather, "color": get_random_color()},
 #         "birthday_left": {"value": get_birthday()},
 #         "words": {"value": get_words(), "color": get_random_color()}
 #         }
-everyone = template_id.split(",")
+everyone = user_id.split(",")
 for i in everyone:
-    res = wm.send_template(user_id, i, data)
+    res = wm.send_template(i, template_id, data)
     print(res)
 
