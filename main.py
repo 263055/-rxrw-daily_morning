@@ -87,24 +87,24 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 # cur max min
 cur, maxs, mins, weather, humidity = get_weather()
-# data = {"weather": {"value": weather, "color": get_random_color()},
-#         "cur": {"value": cur, "color": get_random_color()},
-#         "humidity": {"value": humidity, "color": get_random_color()},
-#         "maxs": {"value": maxs, "color": get_random_color()},
-#         "mins": {"value": mins, "color": get_random_color()},
-#         "love_days": {"value": get_count(), "color": get_random_color()},
-#         "birthday_left": {"value": get_birthday(), "color": get_random_color()},
-#         "words": {"value": get_words(), "color": get_random_color()}
-#         }
-data = {"weather": {"value": weather},
-        "cur": {"value": cur},
-        "humidity": {"value": humidity},
-        "maxs": {"value": maxs},
-        "mins": {"value": mins},
-        "love_days": {"value": get_count()},
-        "birthday_left": {"value": get_birthday()},
+data = {"weather": {"value": weather, "color": get_random_color()},
+        "cur": {"value": cur, "color": get_random_color()},
+        "humidity": {"value": humidity, "color": get_random_color()},
+        "maxs": {"value": maxs, "color": get_random_color()},
+        "mins": {"value": mins, "color": get_random_color()},
+        "love_days": {"value": get_count(), "color": get_random_color()},
+        "birthday_left": {"value": get_birthday(), "color": get_random_color()},
         "words": {"value": get_words(), "color": get_random_color()}
         }
+# data = {"weather": {"value": weather},
+#         "cur": {"value": cur},
+#         "humidity": {"value": humidity},
+#         "maxs": {"value": maxs},
+#         "mins": {"value": mins},
+#         "love_days": {"value": get_count()},
+#         "birthday_left": {"value": get_birthday()},
+#         "words": {"value": get_words(), "color": get_random_color()}
+#         }
 res = wm.send_template(user_id, template_id, data)
 print(res)
 
