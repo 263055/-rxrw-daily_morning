@@ -98,13 +98,13 @@ cur, maxs, mins, weather, humidity = get_weather()
 #         }
 data = {"weather": {"value": weather, "color1": get_random_color()},
         "cur": {"value": cur, "color2": get_random_color()},
-        "humidity": {"value": humidity, "color3": get_random_color()},
-        "maxs": {"value": maxs, "color4": get_random_color()},
-        "mins": {"value": mins, "color5": get_random_color()},
-        "love_days": {"value": get_count(), "color6": get_random_color()},
-        "birthday_left": {"value": get_birthday(), "color7": get_random_color()},
-        "words": {"value": get_words(), "color8": get_random_color()}
-        }
-res = wm.send_template(user_id, template_id, data)
+        "humidity": {"value": humidity, "color": get_random_color()},
+        "maxs": {"value": maxs, "color": get_random_color()},
+        "mins": {"value": mins, "color": get_random_color()},
+        "love_days": {"value": get_count(), "color": get_random_color()},
+        "birthday_left": {"value": get_birthday(), "color": get_random_color()},
+        "words": {"value": get_words(), "color": get_random_color()}
+        } 
+res = wm.send_subscribe_template(user_id, template_id, 0, "小狗狗", data)
 print(res)
 
