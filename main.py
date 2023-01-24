@@ -96,15 +96,15 @@ cur, maxs, mins, weather, humidity = get_weather()
 #         "birthday_left": {"value": get_birthday(), "color": get_random_color()},
 #         "words": {"value": get_words(), "color": get_random_color()}
 #         }
-data = {"weather": {"value": weather, "color1": get_random_color()},
-        "cur": {"value": cur, "color2": get_random_color()},
-        "humidity": {"value": humidity, "color": get_random_color()},
-        "maxs": {"value": maxs, "color": get_random_color()},
-        "mins": {"value": mins, "color": get_random_color()},
-        "love_days": {"value": get_count(), "color": get_random_color()},
-        "birthday_left": {"value": get_birthday(), "color": get_random_color()},
+data = {"weather": {"value": weather, "color": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "cur": {"value": cur, "color": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "humidity": {"value": humidity, "color": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "maxs": {"value": maxs, "color": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "mins": {"value": mins, "color": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "love_days": {"value": get_count(), "colors": "#%06x" % random.randint(0, 0xFFFFFF)},
+        "birthday_left": {"value": get_birthday(), "colors": "#%06x" % random.randint(0, 0xFFFFFF)},
         "words": {"value": get_words(), "color": get_random_color()}
-        } 
+        }
 res = wm.send_template(user_id, template_id, data)
 print(res)
 
