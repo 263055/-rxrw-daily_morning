@@ -105,6 +105,6 @@ data = {"weather": {"value": weather, "color1": get_random_color()},
         "birthday_left": {"value": get_birthday(), "color": get_random_color()},
         "words": {"value": get_words(), "color": get_random_color()}
         } 
-res = wm.send_subscribe_template(user_id, template_id, 0, "小狗狗", data)
+res = wm.send_template(user_id, template_id, data)
 print(res)
 
