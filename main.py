@@ -40,10 +40,9 @@ def get_birthday2():
         next = next.replace(year=next.year + 1)
     return (next - today).days
 
+
 def get_menses():
     next = datetime.strptime(str(date.today().year) + "-" + menses, "%Y-%m-%d")
-    if next < datetime.now():
-        next = next.replace(year=next.year + 1)
     return (next - today).days
 
 def get_curmenses():
