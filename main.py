@@ -10,15 +10,19 @@ today = datetime.now()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
-menses = os.environ['MENSES_DATE']
+
 birthday2 = os.environ['BIRTHDAY2']
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
+
+menses = os.environ['MENSES_DATE']
+
+
 def get_weather():
-    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&ext=&cityid=&city=" + "周口"
+    url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&ext=&cityid=&city=" + city
     res = requests.get(url).json()
     wet = res['data'][0]
     return wet['tem'], wet['tem1'], wet['tem2'], wet['phrase'], wet['humidity']
