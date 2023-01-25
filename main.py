@@ -42,8 +42,7 @@ def get_birthday2():
 
 
 def get_menses():
-    next = datetime.strptime(str(date.today().year) + "-" + menses, "%Y-%m-%d")
-    return (next - today).days
+     return datetime.strptime(str(date.today().year) + "-" + menses, "%Y-%m-%d").day
 
 def get_curmenses():
     return menses
