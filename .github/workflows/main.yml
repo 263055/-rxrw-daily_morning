@@ -32,3 +32,4 @@ jobs:
       CITY: ${{ secrets.CITY }}
       MYBIRTHDAY: ${{ secrets.MYBIRTHDAY }}
       MENSES_DATE: ${{ secrets.MENSES_DATE }}
+      KEYAPI: ${{ secrets.KEYAPI }}
