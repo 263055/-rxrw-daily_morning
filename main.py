@@ -33,7 +33,7 @@ def get_weather():
     wet = resT['daily'][0]
     a, b = wet['tempMax'], wet['tempMin']
     c = (int(a) + int(b)) / 2
-    return c, wet['tempMax'], wet['tempMin'], wet['textDay'], wet['humidity']
+    return int(c), wet['tempMax'], wet['tempMin'], wet['textDay'], wet['humidity']
 
 def get_count():
     delta = today - datetime.strptime(start_date, "%Y-%m-%d")
